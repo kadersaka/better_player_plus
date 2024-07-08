@@ -618,7 +618,11 @@ class VideoPlayerController extends ValueNotifier<VideoPlayerValue> {
   }
 
   void setAudioTrack(String? name, int? index) {
-    _videoPlayerPlatform.setAudioTrack(_textureId, name, index);
+    print('this.toString(): ${this.toString()}');
+    _videoPlayerPlatform.toString();
+    if (_textureId != null) {
+      _videoPlayerPlatform.setAudioTrack(_textureId, name, index);
+    }
   }
 
   void setMixWithOthers(bool mixWithOthers) {
